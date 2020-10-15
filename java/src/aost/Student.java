@@ -4,6 +4,15 @@ public class Student {
     private String name;
     private int id;
     private int age;
+    static String classRoom;
+
+    public static String getClassRoom() {
+        return classRoom;
+    }
+
+    public static void setClassRoom(String classRoom) {
+        Student.classRoom = classRoom;
+    }
 
     public Student(String name, int id, int age) {
         this.name = name;

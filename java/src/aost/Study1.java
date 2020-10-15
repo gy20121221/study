@@ -3,6 +3,9 @@ package aost;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * @author 嘿嘿
+ */
 public class Study1 {
      public static void main(String[] args) {
 

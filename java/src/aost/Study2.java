@@ -8,11 +8,11 @@ import java.util.ArrayList;
 public class Study2 {
     public static void main(String[] args) {
 
-        /**ArrayList<String> list=new ArrayList<>();
+        /*ArrayList<String> list=new ArrayList<>();
         list.add("zzp");//添加
         list.add("szr");
         list.add("ll");
-        System.out.println(list);**/
+        System.out.println(list);*/
 
         ArrayList<String> list=new ArrayList<>();
         list.add("szr");
