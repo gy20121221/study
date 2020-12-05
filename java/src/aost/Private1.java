@@ -1,7 +1,7 @@
 package aost;
 
 public class Private1 {
-    String name;
+     String name;
     private int age;
     private boolean man;
 
