@@ -21,12 +21,30 @@ public class Study4 {
             System.out.print(arrchar[i]);
         }*/
 
-        Tphone tphone=new Tphone();
+      /*  Tphone tphone=new Tphone();
         tphone.name="qwq";
         tphone.setAge(18);
         tphone.setMan(true);
         tphone.show();
-        System.out.println(tphone.getPrime(28));
+        System.out.println(tphone.getPrime(28));*/
+
+
+
+/*        Phone mi=new Mi();
+        mi.setBrand("mi");
+        mi.setColor("red");
+        mi.setPrice(1599);
+        System.out.println(mi.toString());*/
+
+
+        Computer computer=new Computer();
+        computer.openC();
+
+        computer.userUsb(new Mouse());
+
+        computer.close();
 
     }
+
+
 }
