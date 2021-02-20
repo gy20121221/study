@@ -19,7 +19,6 @@ public class Study6 {
             System.out.println(a);
         }
         collection.clear();
-
     }
     /*
 * 基本类型与字符串之间的转换
@@ -49,9 +48,6 @@ Double类:
 static double parseDouble(String s)
 静态双倍(字符串s)
 */
-
-
-
     /*
     * java. util. Collection接口
 所有单列集合的最顶层的接口,里边定义了所有单列集合共性的方法
@@ -64,6 +60,5 @@ public boolean contoins(E e):判断当前集合中是否包含给定的对象。
 public boolean isEmpty(): 判断当前集合是否为空。  为空返回true
 public int size(): 返回集合中元素的个数。
 public object[] taArray(): 把集合中的元素，存储到数组中。
-
 */
 }
