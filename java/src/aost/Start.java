@@ -106,7 +106,7 @@ public class Start {
 
    **/
     public static aost.Phone phone2(){
-        aost.Phone one=new aost.Phone();
+        aost.Phone one=new aost.Phone   ();
         one.brand="小米";
         one.price=1999;
         one.color="black";
