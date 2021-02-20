@@ -11,8 +11,27 @@ public class Study6 {
         s2();
         s3();
         s4();
+        Collection<String> collection=new ArrayList<>();
+        collection.add("qwq");
+        collection.add("qw");
+        collection.add("w");
+        Collection<Integer> collection1=new ArrayList<>();
+        collection1.add(1);
+        collection1.add(3);
+        collection1.add(1);
+        s5(collection);
+        s5(collection1);
     }
 
+    //泛型的通配符？的使用
+    private static void s5(Collection<?> arrayList) {
+        for (Object o :
+                arrayList) {
+            System.out.println(o);
+        }
+    }
+
+    //泛型的使用方法
     private static void s4() {
         Study6Test<String> study6Test=new Study6Test<>();
         study6Test.setId("qwq");
@@ -139,5 +158,14 @@ Iterator<E> iterator() 返回在此collection 的元素上进行迭代的迭代�
 集合不使用泛型,默认的类型就是object类型,可以存储任意类型的数据
 弊端:
 不安全,会引发异常
+
+* */
+
+/*
+* 泛型的通配符:
+?:代表任意的数据类型
+使用方式:
+不能创建对象使用
+只能作为方法的参数使用
 
 * */
