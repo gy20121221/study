@@ -4,7 +4,7 @@ import java.text.CollationKey;
 import java.text.Collator;
 import java.util.*;
 
-//可变差数,Map,汉字排序,compare重载
+//可变差数,Map,汉字排序,compare重载,Hashmap,集合
 public class Study8 {
     public static void main(String[] args) {
 
@@ -15,10 +15,27 @@ public class Study8 {
         s8c();
         s8d();
         s8e();
+        s8f();
 
 
     }
 
+    private static void s8f() {
+        HashMap<String,String> hashMap=new HashMap<>();
+        hashMap.put(null,"qwq");
+        hashMap.put(null,null);
+        hashMap.put("qwq",null);
+        System.out.println(hashMap);
+
+        Hashtable<String,String> hashtable=new Hashtable<>();
+        hashMap.put(null,"qwq");//无法存入
+        hashMap.put(null,null);//无法存入
+        hashMap.put("qwq",null);//无法存入
+        System.out.println(hashtable);
+
+    }
+
+    //中文排序
     private static void s8e() {
         Map<Study8Date2,String> map1=new HashMap<>();
         map1.put(new Study8Date2(22,"lbw"),"sb");
@@ -222,4 +239,29 @@ Set<Map. Entry<K, V>> entrySet() 返回此映射中包含的映射关系的Set�
 * HashMap存储自定义类型键值I
 Map集合保证key是唯一-的:
 作为key的元素,必须重写hashCode方法和equal s方法,以保证key唯一
+* */
+
+/*
+*
+* java.util.Hashtable<K, V>集合implements Map<K, V>接口
+Hashtable:底层也是一个哈希表,是- -个线程安全的集合，是单线程集合,速度慢
+HashMap:底层是一个哈希表,是-个线程不安全的集合,是多线程的集合,速度快
+HashMap集合(之前学的所有的集合):可以存储null值, null键
+Hashtable集合,不能存储null值, nuLl键
+Hashtable和Vector集合一样 ,在jdk1. 2版本之后被更先进的集合(HashMap, Arraylist )取代了
+Hashtable的子类Properties依然活跃在历史舞台
+Properties集合是一个唯一和I0流相结合的集合
+*/
+
+/*
+* JDK9的新特性:
+List接口, Set接口, Map接口:里边增加了- -个静态的方法of,可以给集合-次性添加多 个元素
+static <E> List<E> of (E... elements )
+使用前提:
+当集合中存储的元素的个数已经确定了,不在改变时使用
+注意:
+1. of方法只适用于List接口, Set接口,Map接口,不适用于接接口的实现类
+2. of方法的返回值是- -个不能改变的集合,集合不能再使用add, put方法添加元素,会抛出异常
+3. Set接口和Map接口在调用of方法的时候，不能有重复的元素,否则会抛出异常
+
 * */
