@@ -65,7 +65,7 @@ public class Demo2 {
                 }
             } else diPai.add(ins);
         }
-
+        
         Collections.sort(w1);
         Collections.sort(w2);
         Collections.sort(w3);
