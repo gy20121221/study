@@ -1,13 +1,53 @@
 package aost;
 
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 //多线程
 public class Study10 {
+
+
     public static void main(String[] args) {
 
         //s10();
-        s10a();
+//        s10a();
+          s10b();
 
+    }
+
+    private static void s10b() {
+        Object o=new Object();
+
+        new Thread(){
+                @Override
+                public void run() {
+                    synchronized (o){
+                        System.out.println("告诉老板买包子");
+                        try {
+                            o.wait(5000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        System.out.println("拿到包子");
+                    }
+                }
+        }.start();
+
+        new Thread(){
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                synchronized (o){
+                    o.notify();
+                    System.out.println("做包子");
+                }
+            }
+        }.start();
     }
 
     private static void s10a() {
@@ -76,3 +116,21 @@ new
 重复父类/接口中的方法
 };
 */
+
+
+/*
+* 等待唤醒案例:线程之间的通信
+创建一一个顾客线程(消费者):告知老板要的包子的种类和数量,调用wait方法,放弃cpu的执行，进入到WAITING状态(无限等待)
+创建-一个老板线程(生产者):花了5秒做包子,做好包子之后,调用notify方法,唤醒顾客吃包子
+注意:
+顾客和老板线程必须使用同步代码块包裹起来,保证等待和唤醒只能有一-个在执行
+同步使用的锁对象必须保证唯一
+只有锁对象才能调用wai t和notify方法
+obejct类中的方法
+void wait()
+在其他线程调用此对象的notify() 方法或notifyAll() 方法前，导致当前线程等待。
+void notify()
+唤醒在此对象监视器上等待的单个线程。
+会继续执行wait方法之后的代码
+
+* */
