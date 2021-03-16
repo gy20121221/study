@@ -1,10 +1,13 @@
 package aost;
 
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-//多线程
+//多线程  线程池  lambda表达式
 public class Study10 {
 
 
@@ -12,8 +15,68 @@ public class Study10 {
 
         //s10();
 //        s10a();
-          s10b();
+//          s10b();
+//          s10c();
+//        s10d();
+        s10e();
 
+    }
+
+    //lambda表达式应用
+    private static void s10e() {
+       getUsbJia(10, 20, new Study10tt() {
+           @Override
+           public int jia(int a, int b) {
+               return a+b;
+           }
+       });
+
+       //lambda表达式
+       getUsbJia(100,50,
+               (int a,int b)->
+               { return a+b; });
+
+        //lambda表达式 优化省略
+        getUsbJia(100,50, ( a, b)-> a+b);
+
+
+
+    }
+
+    public static int getUsbJia(int a,int b,Study10tt study10tt){
+        System.out.println(study10tt.jia(a,b));
+        return study10tt.jia(a,b);
+    }
+
+    private static void s10d() {
+
+        //匿名内部类
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("线程s10d");
+            }
+        }).start();
+
+        //使用lambda表达式,实现多线程
+        new Thread(()->{
+            System.out.println("lambda表达式实现多线程");
+        }).start();
+
+
+        //使用lambda表达式,实现多线程 优化省略lambda
+        new Thread(()-> System.out.println("lambda表达式实现多线程")).start();
+
+
+
+    }
+
+    //线程池
+    private static void s10c() {
+        ExecutorService executorService= Executors.newFixedThreadPool(2);
+        executorService.submit(new Study10T());
+        executorService.submit(new Study10T());
+        executorService.shutdown();
     }
 
     private static void s10b() {
@@ -132,5 +195,52 @@ void wait()
 void notify()
 唤醒在此对象监视器上等待的单个线程。
 会继续执行wait方法之后的代码
+
+* */
+
+/*
+* 线程池:JDK1.5之后提供的
+java. util. concurrent . Executors :线程池的工厂类,用来生成线程池
+Executors类中的静态方法:
+static ExecutorService newF ixedThreadPool(int nThreads) 创建- -个可重 用固定线程数的线程池
+参数:
+int nThreads :创建线程池中包含的线程数量
+返回值:
+ExecutorService接口,返回的是ExecutorService接口的实现类对象,我们可以使用ExecutorService接口接收(面向接口编程)
+java. util. concurrent. ExecutorService :线程池接口
+用来从线程池中获取线程,调用start方法,执行线程任务
+submit(Runnable task) 提交- -个Runnable 任务用于执行
+关闭/销毁线程池的方法
+void shutdown()
+线程池的使用步骤:
+1.使用线程池的工厂类Executors里边提供的静态方法newFixedThreadPool生产- -个指定线程数量的线程池
+2.创建一个类,实现Runnable接口，重写run方法，设置线程任务
+3.调用ExecutorService中的方法submit,传递线程任务(实现类),开启线程,执行run方法
+4.调用ExecutorService中的方法shutdown销毁线程池(不建议执行)
+*/
+
+/*
+* Lambda表达式的标准格式:
+由三部分组成:
+a.-些参数
+b.- -个箭头
+c.-段代码
+格式:
+(参数列表) -> {- -些重写方法的代码};
+解释说明格式:
+():接口中抽象方法的参数列表,没有参数。就空着;有参数就写出参数,多个参数使用逗号分隔
+-> :传递的意思，把参数传递给方法体{}
+{}:重写接口的抽象方法的方法体
+*/
+
+/*
+*
+* Lambda表达式:是可推导,可以省略
+凡是根据.上下文推导出来的内容,都可以省略书写
+可以省略的内容:
+1. (参数列表) ;括号中参数列表的数据类型,可以省略不写
+2. (参数列表) :括号中的参数如果只有- -个，那么类型和( )都可以省略
+3.{一些代码} :如果{}中的代码只有一行, 无论是否有返回值，都可以省略({},return,分号)
+注意:要省略{},return,分号必须一起省略
 
 * */

@@ -2,6 +2,11 @@ package aost;
 
 public class Keyb implements Usb {
     @Override
+    public int jia(int a, int b) {
+        return a+b;
+    }
+
+    @Override
     public void open() {
         System.out.println("打开键盘");
     }
