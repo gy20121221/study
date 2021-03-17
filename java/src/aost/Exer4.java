@@ -12,10 +12,18 @@ public class Exer4 {
             System.out.print(anInt+" ");
         }
         System.out.println();
-        ints = MergeSort(ints);
+//        ints = MergeSort(ints);
+//        MySort(ints);
+        CountingSort(ints);
+
+
+
+//        Arrays.sort(ints);
         for (int anInt : ints) {
             System.out.print(anInt+" ");
         }
+
+
 
 
     }
@@ -47,7 +55,48 @@ public class Exer4 {
     }
 
 
+    public static int[] MySort (int[] array) {
+        // write code here
+        int s;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length- i-1; j++) {
+                if (array[j]>array[j+1]){
+                    s=array[j];
+                    array[j]=array[j+1];
+                    array[j+1]=s;
+                }
+            }
+        }
+        return array;
+    }
 
 
+    /** 计数排序*/
+    public static int[] CountingSort(int[] array) {
+        if (array.length == 0) return array;
+        int bias, min = array[0], max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max)
+                max = array[i];
+            if (array[i] < min)
+                min = array[i];
+        }
+        bias = -min;
+        int[] bucket = new int[max - min + 1];
+        Arrays.fill(bucket, 0);
+        for (int j : array) {
+            bucket[j + bias]++;
+        }
+        int index = 0, i = 0;
+        while (index < array.length) {
+            if (bucket[i] != 0) {
+                array[index] = i - bias;
+                bucket[i]--;
+                index++;
+            } else
+                i++;
+        }
+        return array;
+    }
 
 }
