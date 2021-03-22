@@ -12,6 +12,39 @@ public class Ams2 {
 //        问m天后小强的n个养鸡场一共多少只小鸡？
 //        输入 第一行输入三个int类型n,m,k（1 <= n,m,k <= 10^6） 第二行输入n个正整数，表示n个养鸡场初始鸡的个数
 //        输出 输出一个整数表示鸡的总数
+
+
+
+        Scanner scanner=new Scanner(System.in);
+        int n,m,k;
+        n=scanner.nextInt();
+        m=scanner.nextInt();
+        k=scanner.nextInt();
+        int max=0,max1=0,max2=0,z=0;
+        int s=0;
+        for (int i = 0; i < n; i++) {
+            int j=scanner.nextInt();
+            s+=j;
+            if (j>max) max=j;
+            else if(j>max1) max1=j;
+            else if(j>max2) max2=j;
+        }
+        for (int i = 0; i < m; i++) {
+            z=(max+k)/2;
+            max=max-z;
+            s=s+n*k-z;
+            if (max<max1&&max<max2) ;
+        }
+
+
+
+
+
+
+
+
+
+     /*   尝试一
         Scanner scanner=new Scanner(System.in);
         int n,m,k;
         n=scanner.nextInt();
@@ -22,20 +55,30 @@ public class Ams2 {
         for (int i = 0; i < n; i++) {
             ints[i]= scanner.nextInt();
         }
-        arrP(ints);
+        MergeSort(ints);
         for (int i = 0; i < m; i++) {
             for (int i1 = 0; i1 < ints.length; i1++) {
                 ints[i1]+=k;
             }
             ints[0]=ints[0]/2;
-            arrP(ints);
+            MergeSort(ints);
         }
         for (int anInt : ints) {
             s+=anInt;
         }
-        System.out.println(s);
+        System.out.println(s);*/
+
+
+
+
+
+
 
     }
+
+
+
+
 
     //冒泡排序 ,从大到小
     private static int[] arrP(int[] ints) {
