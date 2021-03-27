@@ -42,6 +42,7 @@ public class Ams4 {
         return null;
     }
 
+    //反转链表
     public static ListNode ReverseList(ListNode head) {
         if (head == null)
             return null;
