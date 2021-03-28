@@ -43,6 +43,17 @@ public class Ams6 {
         return head;
     }
 
+    public static void reverse(ListNode head, ListNode tail) {
+        ListNode p1 = head, p2 = head.next, p = head, last = tail.next;
+        while (p2 != last && p2 != null) {
+            p1.next = p2.next;
+            p2.next = p;
+            p = p2;
+            p2 = p1.next;
+        }
+    }
+
+
     private static void ex(ListNode p1, ListNode p2) {
         ListNode z1 = p1;
         ListNode n1 = p1.next;
@@ -55,17 +66,8 @@ public class Ams6 {
             n1=z1;
         }
     }
-    public static void reverse(ListNode head, ListNode tail) {
-        ListNode p1 = head, p2 = head.next, p = head, last = tail.next;
-        while (p2 != last && p2 != null) {
-            p1.next = p2.next;
-            p2.next = p;
-            p = p2;
-            p2 = p1.next;
-        }
-    }
 
-
+    
     //链表
     public static class ListNode {
         int val;
