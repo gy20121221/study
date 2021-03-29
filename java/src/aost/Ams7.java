@@ -39,9 +39,6 @@ public class Ams7 {
             quick_sort2(ints,l+1,high);
             quick_sort2(ints,low,r-1);
         }
-
-
-
     }
 
 
