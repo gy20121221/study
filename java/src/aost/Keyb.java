@@ -3,7 +3,7 @@ package aost;
 public class Keyb implements Usb {
     @Override
     public int jia(int a, int b) {
-        return a+b;
+        return a + b;
     }
 
     @Override
@@ -16,7 +16,7 @@ public class Keyb implements Usb {
         System.out.println("关闭键盘");
     }
 
-    public void type(){
+    public void type() {
         System.out.println("使用键盘");
     }
 }

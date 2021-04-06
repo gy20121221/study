@@ -12,11 +12,11 @@ public class Study7 {
     }
 
     private static void s7c() {
-        HashSet<Study7Test> study7TestHashSet=new HashSet<>();
-        Study7Test s1=new Study7Test("lbw",1);
-        Study7Test s2=new Study7Test("lbw",1);
-        Study7Test s3=new Study7Test("lbw",2);
-        Study7Test s4=new Study7Test("qwq",1);
+        HashSet<Study7Test> study7TestHashSet = new HashSet<>();
+        Study7Test s1 = new Study7Test("lbw", 1);
+        Study7Test s2 = new Study7Test("lbw", 1);
+        Study7Test s3 = new Study7Test("lbw", 2);
+        Study7Test s4 = new Study7Test("qwq", 1);
         System.out.println(s1.hashCode());
         System.out.println(s2.hashCode());
         System.out.println(s3.hashCode());
@@ -29,7 +29,7 @@ public class Study7 {
     }
 
     private static void s7b() {
-        HashSet<Integer> hashSet=new HashSet<>();
+        HashSet<Integer> hashSet = new HashSet<>();
         hashSet.add(1);
         hashSet.add(1);
         hashSet.add(3);
@@ -43,7 +43,7 @@ public class Study7 {
     }
 
     public static void s7a() {
-        LinkedList<String> linkedList=new LinkedList<>();
+        LinkedList<String> linkedList = new LinkedList<>();
         linkedList.add("a");
         linkedList.add("b");
         linkedList.add("a");

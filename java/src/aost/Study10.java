@@ -24,28 +24,29 @@ public class Study10 {
 
     //lambda表达式应用
     private static void s10e() {
-       getUsbJia(10, 20, new Study10tt() {
-           @Override
-           public int jia(int a, int b) {
-               return a+b;
-           }
-       });
+        getUsbJia(10, 20, new Study10tt() {
+            @Override
+            public int jia(int a, int b) {
+                return a + b;
+            }
+        });
 
-       //lambda表达式
-       getUsbJia(100,50,
-               (int a,int b)->
-               { return a+b; });
+        //lambda表达式
+        getUsbJia(100, 50,
+                (int a, int b) ->
+                {
+                    return a + b;
+                });
 
         //lambda表达式 优化省略
-        getUsbJia(100,50, ( a, b)-> a+b);
-
+        getUsbJia(100, 50, (a, b) -> a + b);
 
 
     }
 
-    public static int getUsbJia(int a,int b,Study10tt study10tt){
-        System.out.println(study10tt.jia(a,b));
-        return study10tt.jia(a,b);
+    public static int getUsbJia(int a, int b, Study10tt study10tt) {
+        System.out.println(study10tt.jia(a, b));
+        return study10tt.jia(a, b);
     }
 
     private static void s10d() {
@@ -59,45 +60,44 @@ public class Study10 {
         }).start();
 
         //使用lambda表达式,实现多线程
-        new Thread(()->{
+        new Thread(() -> {
             System.out.println("lambda表达式实现多线程");
         }).start();
 
 
         //使用lambda表达式,实现多线程 优化省略lambda
-        new Thread(()-> System.out.println("lambda表达式实现多线程")).start();
-
+        new Thread(() -> System.out.println("lambda表达式实现多线程")).start();
 
 
     }
 
     //线程池
     private static void s10c() {
-        ExecutorService executorService= Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
         executorService.submit(new Study10T());
         executorService.submit(new Study10T());
         executorService.shutdown();
     }
 
     private static void s10b() {
-        Object o=new Object();
+        Object o = new Object();
 
-        new Thread(){
-                @Override
-                public void run() {
-                    synchronized (o){
-                        System.out.println("告诉老板买包子");
-                        try {
-                            o.wait(5000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                        System.out.println("拿到包子");
+        new Thread() {
+            @Override
+            public void run() {
+                synchronized (o) {
+                    System.out.println("告诉老板买包子");
+                    try {
+                        o.wait(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
+                    System.out.println("拿到包子");
                 }
+            }
         }.start();
 
-        new Thread(){
+        new Thread() {
             @Override
             public void run() {
                 try {
@@ -105,7 +105,7 @@ public class Study10 {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                synchronized (o){
+                synchronized (o) {
                     o.notify();
                     System.out.println("做包子");
                 }
@@ -114,10 +114,10 @@ public class Study10 {
     }
 
     private static void s10a() {
-        Study10ts s1=new Study10ts();
-        Thread t1=new Thread(s1);
-        Thread t2=new Thread(s1);
-        Thread t3=new Thread(s1);
+        Study10ts s1 = new Study10ts();
+        Thread t1 = new Thread(s1);
+        Thread t2 = new Thread(s1);
+        Thread t3 = new Thread(s1);
         t2.start();
         t1.start();
         t3.start();
@@ -131,20 +131,20 @@ public class Study10 {
         for (int i = 0; i < 1000; i++) {
             System.out.println("main"+i*i*i*1086001/220);
         }*/
-        Runnable runnable=new Runnable() {
+        Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 System.out.println("run线程");
             }
         };
 
-        Thread t2=new Thread(runnable);
+        Thread t2 = new Thread(runnable);
         t2.start();
 
-        new Thread(){
+        new Thread() {
             @Override
             public void run() {
-                System.out.println(Thread.currentThread().getName()+"1");
+                System.out.println(Thread.currentThread().getName() + "1");
             }
         }.start();
     }

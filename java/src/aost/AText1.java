@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class AText1 {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        while (n>0){
+        while (n > 0) {
             String next = scanner.next();
             toT(next);
             --n;
@@ -20,18 +20,18 @@ public class AText1 {
         char[] chars = s.toCharArray();//将传入的String型数据转化为char[];
         StringBuilder stringBuilder = new StringBuilder();//创建一个Builder对象接收char[]字符串
         int k = 0;
-        for (int i = 0;i < chars.length; i++){
+        for (int i = 0; i < chars.length; i++) {
             chars[k] = chars[i];
             stringBuilder.append(chars[k]);//将第k个字符append到Builder
             k++;
             //实现第一个条件
-            if (k >= 3 && chars[k-3] == chars[k-2] && chars[k-3] == chars[k-1]){
-                stringBuilder.deleteCharAt(k-1);//删除不符合的字符
+            if (k >= 3 && chars[k - 3] == chars[k - 2] && chars[k - 3] == chars[k - 1]) {
+                stringBuilder.deleteCharAt(k - 1);//删除不符合的字符
                 k--;
             }
             //实现第二个条件
-            if (k >= 4 && chars[k-4] == chars[k-3] && chars[k-2] == chars[k-1]){
-                stringBuilder.deleteCharAt(k-1);
+            if (k >= 4 && chars[k - 4] == chars[k - 3] && chars[k - 2] == chars[k - 1]) {
+                stringBuilder.deleteCharAt(k - 1);
                 k--;
             }
         }

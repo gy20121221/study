@@ -75,7 +75,7 @@ length -要复制的数组元素的数量。
 /*
  *StringBuilder() 字符串缓存区，用于减少字符串操作的内存浪费
  * 主要有append方法 添加字符串，返回添加后的字符串本身
- * 
+ *
  * */
 public class Study5 {
     public static void main(String[] args) throws ParseException {

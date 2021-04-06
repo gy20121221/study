@@ -1,5 +1,6 @@
 package aost;
 //《算法》中的代码
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -41,27 +42,33 @@ public class Exer3 {
         System.out.println(a);//随机数*/
 
 
-       /*System.out.println( recursive(10,-1));*/
+        /*System.out.println( recursive(10,-1));*/
 
         System.out.println(getPrime(8));
     }
 
-    public static int recursive(int a,int i){
+    public static int recursive(int a, int i) {
         i++;
-        if (a==1) {return i;}
-        return recursive(a/2,i);
+        if (a == 1) {
+            return i;
+        }
+        return recursive(a / 2, i);
     }//递归思想，一个数多少次被除到1
 
-    public static double  hypo(double a,double b){
-        return Math.sqrt(a*a+b*b);
+    public static double hypo(double a, double b) {
+        return Math.sqrt(a * a + b * b);
     }//计算三角形斜边
 
-    public static boolean getPrime(int a){
-        if (a<2) { return false; }
-        for (int i = 2; i*i<= a; i++)
-        {
-            if (a%i==0){return false;} }
-            return true;
+    public static boolean getPrime(int a) {
+        if (a < 2) {
+            return false;
+        }
+        for (int i = 2; i * i <= a; i++) {
+            if (a % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }//最简单判断质数的办法。
 
 }

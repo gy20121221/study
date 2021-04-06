@@ -61,13 +61,13 @@ public class Ams6 {
         ListNode n2 = p2.next;
         if (z1 != p2 && n2 != null) {
             z1 = n1.next;
-            n1.next=z2;
-            z2=n1;
-            n1=z1;
+            n1.next = z2;
+            z2 = n1;
+            n1 = z1;
         }
     }
 
-    
+
     //链表
     public static class ListNode {
         int val;

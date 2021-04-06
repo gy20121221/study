@@ -7,9 +7,9 @@ public class Exer4 {
     public static void main(String[] args) {
 
 
-        int[] ints={1,2,32,3,3,5,878,488,4};
+        int[] ints = {1, 2, 32, 3, 3, 5, 878, 488, 4};
         for (int anInt : ints) {
-            System.out.print(anInt+" ");
+            System.out.print(anInt + " ");
         }
         System.out.println();
 //        ints = MergeSort(ints);
@@ -17,18 +17,17 @@ public class Exer4 {
         CountingSort(ints);
 
 
-
 //        Arrays.sort(ints);
         for (int anInt : ints) {
-            System.out.print(anInt+" ");
+            System.out.print(anInt + " ");
         }
-
-
 
 
     }
 
-    /**归并排序*/
+    /**
+     * 归并排序
+     */
     public static int[] MergeSort(int[] array) {
         if (array.length < 2) return array;
         int mid = array.length / 2;
@@ -36,6 +35,7 @@ public class Exer4 {
         int[] right = Arrays.copyOfRange(array, mid, array.length);
         return merge(MergeSort(left), MergeSort(right));
     }
+
     /**
      * 归并排序——将两段排序好的数组结合成一个排序数组
      */
@@ -55,15 +55,15 @@ public class Exer4 {
     }
 
 
-    public static int[] MySort (int[] array) {
+    public static int[] MySort(int[] array) {
         // write code here
         int s;
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length- i-1; j++) {
-                if (array[j]>array[j+1]){
-                    s=array[j];
-                    array[j]=array[j+1];
-                    array[j+1]=s;
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    s = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = s;
                 }
             }
         }
@@ -71,7 +71,9 @@ public class Exer4 {
     }
 
 
-    /** 计数排序*/
+    /**
+     * 计数排序
+     */
     public static int[] CountingSort(int[] array) {
         if (array.length == 0) return array;
         int bias, min = array[0], max = array[0];

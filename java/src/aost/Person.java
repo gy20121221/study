@@ -7,8 +7,8 @@ public class Person {
     int age;
 
     public Person(String name, int age) {
-        this.name=name;
-        this.age=age;
+        this.name = name;
+        this.age = age;
     }
 
     //重写equals 比较person中数据，而不是地址值
@@ -50,7 +50,7 @@ public class Person {
         this.age = age;
     }
 
-    public void show(){
-        System.out.println(name+""+age);
+    public void show() {
+        System.out.println(name + "" + age);
     }
 }

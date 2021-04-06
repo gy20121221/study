@@ -24,20 +24,20 @@ public class Ams7 {
 
     //快速排序 大到小
     private static void quick_sort2(int[] ints, int low, int high) {
-        if (low<high){
-            int k=ints[low],l=low,r=high;
+        if (low < high) {
+            int k = ints[low], l = low, r = high;
 
-            while (l<r){
-                while (l<r&&ints[r]<=k) r--;
-                if (l<r) ints[l++]=ints[r];
+            while (l < r) {
+                while (l < r && ints[r] <= k) r--;
+                if (l < r) ints[l++] = ints[r];
 
-                while (l<r&&ints[l]>k) l++;
-                if (l<r) ints[r--]=ints[l];
+                while (l < r && ints[l] > k) l++;
+                if (l < r) ints[r--] = ints[l];
             }
-            ints[l]=k;
+            ints[l] = k;
 
-            quick_sort2(ints,l+1,high);
-            quick_sort2(ints,low,r-1);
+            quick_sort2(ints, l + 1, high);
+            quick_sort2(ints, low, r - 1);
         }
     }
 

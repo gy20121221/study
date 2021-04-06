@@ -14,27 +14,27 @@ public class Study2 {
         list.add("ll");
         System.out.println(list);*/
 
-        ArrayList<String> list=new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("szr");
         list.add("ll");
         list.add("czl");
-        boolean a=list.add("zzp");
+        boolean a = list.add("zzp");
         System.out.println(a);
         //list.add有返回值，为true
-        String b=list.get(2);
+        String b = list.get(2);
         //索引，参数为元素位置
         System.out.println(b);
-        String c=list.remove(0);
+        String c = list.remove(0);
         //有返回值，为被删除的元素
         System.out.println(c);
         System.out.println(list);
         System.out.println(list.size());
         //获取长度
         for (int i = 0; i < list.size(); i++) {
-            System.out.println("元素:"+list.get(i));
+            System.out.println("元素:" + list.get(i));
             //遍历
         }
-        ArrayList<Integer> list1=new ArrayList<>();
+        ArrayList<Integer> list1 = new ArrayList<>();
         list1.add(12);
         list1.add(21);
         list1.add(33);

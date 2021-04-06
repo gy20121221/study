@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author 嘿嘿
  */
 public class Study1 {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
 
 
         /* 引用类型的一般使用步骤:
@@ -112,8 +112,7 @@ public class Study1 {
           //数组有一个缺点:一旦创建，程序运行期间长度不可以发生改变。*/
 
 
-
-     }
+    }
 
 
 

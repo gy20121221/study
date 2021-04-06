@@ -10,7 +10,8 @@ public class Study6Test<E> {
     public void setId(E id) {
         this.id = id;
     }
-    public <E> void method(E e){
+
+    public <E> void method(E e) {
         System.out.println(e);
     }
 }

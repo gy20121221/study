@@ -11,7 +11,7 @@ public class AText {
 
 
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         /*int i = scanner.nextInt();
         String n = scanner.next();
         System.out.println(findCode(i, n));*/
@@ -22,42 +22,42 @@ public class AText {
 //        String w = scanner.next();
 //        String l = scanner.next();
 //        System.out.println(findWin(n,m, w, l));
-        String s="qwqwqwqwaaqwq";
+        String s = "qwqwqwqwaaqwq";
         System.out.println(mathW(s));
 
 
     }
 
-    private static String findWin(int n,String m,String w,String l) {
-        if (n>=m.length()||n>=w.length()||n>=l.length()) return "draw";
+    private static String findWin(int n, String m, String w, String l) {
+        if (n >= m.length() || n >= w.length() || n >= l.length()) return "draw";
         int m1 = mathW(m);
         int w1 = mathW(w);
         int l1 = mathW(l);
-        int s=m.length();
-        int win=0;
-        if (m1+n>=s) ++win;
-        if (w1+n>=s) ++win;
-        if (l1+n>=s) ++win;
+        int s = m.length();
+        int win = 0;
+        if (m1 + n >= s) ++win;
+        if (w1 + n >= s) ++win;
+        if (l1 + n >= s) ++win;
 
-        if (win>=2) return "draw";
+        if (win >= 2) return "draw";
         else {
-            if (m1>w1&&m1>l1) return "ming";
-            else if (w1>m1&&w1>l1) return "wang";
+            if (m1 > w1 && m1 > l1) return "ming";
+            else if (w1 > m1 && w1 > l1) return "wang";
             else return "li";
         }
     }
 
 
     //输出字符串中的最大字母个数
-    public static int mathW(String s){
-        HashMap<Character,Integer> hashMap=new HashMap<>();
-        int max=0;
+    public static int mathW(String s) {
+        HashMap<Character, Integer> hashMap = new HashMap<>();
+        int max = 0;
         for (int i = 0; i < s.length(); i++) {
-            if (!hashMap.containsKey(s.charAt(i))) hashMap.put(s.charAt(i),1);
+            if (!hashMap.containsKey(s.charAt(i))) hashMap.put(s.charAt(i), 1);
             else {
                 Integer integer = hashMap.get(s.charAt(i));
                 ++integer;
-                hashMap.put(s.charAt(i),integer);
+                hashMap.put(s.charAt(i), integer);
             }
         }
         Collection<Integer> values = hashMap.values();

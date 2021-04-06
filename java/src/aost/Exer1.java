@@ -8,10 +8,10 @@ import java.util.Random;
  */
 public class Exer1 {
     public static void main(String[] args) {
-        Random r=new Random();
-        ArrayList<Integer> list1=new ArrayList<>();
+        Random r = new Random();
+        ArrayList<Integer> list1 = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
-            list1.add(r.nextInt(32)+1);
+            list1.add(r.nextInt(32) + 1);
         }
         for (int i = 0; i < 6; i++) {
             System.out.println(list1.get(i));

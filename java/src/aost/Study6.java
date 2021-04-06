@@ -11,11 +11,11 @@ public class Study6 {
         s2();
         s3();
         s4();
-        Collection<String> collection=new ArrayList<>();
+        Collection<String> collection = new ArrayList<>();
         collection.add("qwq");
         collection.add("qw");
         collection.add("w");
-        Collection<Integer> collection1=new ArrayList<>();
+        Collection<Integer> collection1 = new ArrayList<>();
         collection1.add(1);
         collection1.add(3);
         collection1.add(1);
@@ -33,29 +33,29 @@ public class Study6 {
 
     //泛型的使用方法
     private static void s4() {
-        Study6Test<String> study6Test=new Study6Test<>();
+        Study6Test<String> study6Test = new Study6Test<>();
         study6Test.setId("qwq");
         System.out.println(study6Test.getId());
-        Study6Test<String> s2=new Study6Test<>();
+        Study6Test<String> s2 = new Study6Test<>();
         s2.method("泛型方法");
-        Study6IL<String> s3=new Study6IL<>();
+        Study6IL<String> s3 = new Study6IL<>();
         s3.method("接口泛型");
     }
 
     //创建集合对象，使用泛型
     private static void s3() {
-        ArrayList<String> list=new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("q");
         list.add("w");
         list.add("qwe");
         for (String s :
                 list) {
-            System.out.println(s+s.length());
+            System.out.println(s + s.length());
         }
     }
 
-    public static void s1(){
-        Collection<String> collection=new ArrayList<>();
+    public static void s1() {
+        Collection<String> collection = new ArrayList<>();
         collection.add("aost");
         collection.add("q");
         collection.add("w");
@@ -63,23 +63,24 @@ public class Study6 {
         collection.remove("q");
         System.out.println(collection);
         System.out.println(collection.size());
-        Object[] objects=collection.toArray();
+        Object[] objects = collection.toArray();
         for (Object a :
                 objects) {
             System.out.println(a);
         }
         collection.clear();
     }
-    public static void s2(){
-        Collection<String> collection=new ArrayList<>();
+
+    public static void s2() {
+        Collection<String> collection = new ArrayList<>();
         collection.add("zf");
         collection.add("af");
         collection.add("qf");
         collection.add("bf");
         Iterator<String> it = collection.iterator();
-        boolean a=it.hasNext();
+        boolean a = it.hasNext();
         System.out.println(a);
-        while (it.hasNext()){
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
     }

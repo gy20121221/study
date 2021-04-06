@@ -18,22 +18,21 @@ public class Demo2 {
         String[] s = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
 
 
-
         //创建索引
-        HashMap<Integer,String> paiMap=new HashMap<>();
-        ArrayList<Integer> integers=new ArrayList<>();
-        Integer in=0;
+        HashMap<Integer, String> paiMap = new HashMap<>();
+        ArrayList<Integer> integers = new ArrayList<>();
+        Integer in = 0;
 
         integers.add(in);
-        paiMap.put(in,"大王");
+        paiMap.put(in, "大王");
         in++;
         integers.add(in);
-        paiMap.put(in,"小王");
+        paiMap.put(in, "小王");
         in++;
 
         for (String s3 : s) {
             for (String h1 : h) {
-                paiMap.put(in,h1+s3);
+                paiMap.put(in, h1 + s3);
                 integers.add(in);
                 in++;
             }
@@ -65,7 +64,7 @@ public class Demo2 {
                 }
             } else diPai.add(ins);
         }
-        
+
         Collections.sort(w1);
         Collections.sort(w2);
         Collections.sort(w3);
@@ -77,19 +76,19 @@ public class Demo2 {
         System.out.println(diPai);
 
 //        String[] name={"周星驰","lbw","周润发","底牌"};
-        kanpai("周星驰",paiMap,w1);
-        kanpai("lbw",paiMap,w2);
-        kanpai("周润发",paiMap,w3);
-        kanpai("底牌",paiMap,diPai);
+        kanpai("周星驰", paiMap, w1);
+        kanpai("lbw", paiMap, w2);
+        kanpai("周润发", paiMap, w3);
+        kanpai("底牌", paiMap, diPai);
 
 
     }
 
-    private static void kanpai(String name,HashMap<Integer,String> map,ArrayList<Integer> list) {
-        System.out.print(name+":");
+    private static void kanpai(String name, HashMap<Integer, String> map, ArrayList<Integer> list) {
+        System.out.print(name + ":");
         for (Integer i :
                 list) {
-            System.out.print(map.get(i)+" ");
+            System.out.print(map.get(i) + " ");
         }
         System.out.println();
     }

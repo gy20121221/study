@@ -5,22 +5,22 @@ import java.util.Random;
 
 public class Exer2 {
     public static void main(String[] args) {
-        ArrayList<aost.Student> lis=new ArrayList<>();
-        aost.Student a=new aost.Student("zzp",4,20);
-        aost.Student b=new aost.Student("szr",3,20);
-        aost.Student c=new aost.Student("dhf",2,20);
-        aost.Student d=new aost.Student("ll",1,20);
+        ArrayList<aost.Student> lis = new ArrayList<>();
+        aost.Student a = new aost.Student("zzp", 4, 20);
+        aost.Student b = new aost.Student("szr", 3, 20);
+        aost.Student c = new aost.Student("dhf", 2, 20);
+        aost.Student d = new aost.Student("ll", 1, 20);
         lis.add(a);
         lis.add(b);
         lis.add(c);
         lis.add(d);
         for (int i = 0; i < lis.size(); i++) {
-           aost.Student stu=lis.get(i);
-           System.out.println("姓名"+stu.getName()+"学号"+stu.getId()+"年龄"+stu.getAge());
+            aost.Student stu = lis.get(i);
+            System.out.println("姓名" + stu.getName() + "学号" + stu.getId() + "年龄" + stu.getAge());
         }//输出
 
         //ArrayList做方法参数
-        ArrayList<String> list=new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("szr");
         list.add("zzp");
         list.add("dhf");
@@ -31,27 +31,33 @@ public class Exer2 {
         //分割线
 
 
-        ArrayList<Integer> list1=new ArrayList<>();
-        ArrayList<Integer> list2=new ArrayList<>();
-        Random r=new Random();
-        int q=20;
-        for (int i = 0; i <q; i++) {
+        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
+        Random r = new Random();
+        int q = 20;
+        for (int i = 0; i < q; i++) {
             list1.add(r.nextInt(101));
         }
         for (int i = 0; i < list1.size(); i++) {
-            if (list1.get(i)%2==0) {list2.add(list1.get(i));}
+            if (list1.get(i) % 2 == 0) {
+                list2.add(list1.get(i));
+            }
         }
         System.out.println(list2);
         /*
-        * 用一个大集合存入20个随机数字，然后筛选其中的偶数元素，放到小集合当中。
-        * 要求使用自定义的方法来实现筛选。*/
+         * 用一个大集合存入20个随机数字，然后筛选其中的偶数元素，放到小集合当中。
+         * 要求使用自定义的方法来实现筛选。*/
     }
-    public static void lay(ArrayList<String> list){
+
+    public static void lay(ArrayList<String> list) {
         System.out.print("(");
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i));
-            if (i==list.size()-1) {System.out.print(")");}
-            else {System.out.print("@");}
+            if (i == list.size() - 1) {
+                System.out.print(")");
+            } else {
+                System.out.print("@");
+            }
         }
     }//ArrayList做方法参数
 }

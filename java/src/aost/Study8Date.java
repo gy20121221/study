@@ -40,7 +40,7 @@ public class Study8Date implements Comparable<Study8Date> {
     public int compareTo(Study8Date o) {
 
 
-        return this.age-o.age;
+        return this.age - o.age;
 
     }
 }

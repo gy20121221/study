@@ -14,26 +14,25 @@ public class Ams2 {
 //        输出 输出一个整数表示鸡的总数
 
 
-
-        Scanner scanner=new Scanner(System.in);
-        int n,m,k;
-        n=scanner.nextInt();
-        m=scanner.nextInt();
-        k=scanner.nextInt();
-        int max=0,max1=0,max2=0,z=0;
-        int s=0;
+        Scanner scanner = new Scanner(System.in);
+        int n, m, k;
+        n = scanner.nextInt();
+        m = scanner.nextInt();
+        k = scanner.nextInt();
+        int max = 0, max1 = 0, max2 = 0, z = 0;
+        int s = 0;
         for (int i = 0; i < n; i++) {
-            int j=scanner.nextInt();
-            s+=j;
-            if (j>max) max=j;
-            else if(j>max1) max1=j;
-            else if(j>max2) max2=j;
+            int j = scanner.nextInt();
+            s += j;
+            if (j > max) max = j;
+            else if (j > max1) max1 = j;
+            else if (j > max2) max2 = j;
         }
         for (int i = 0; i < m; i++) {
-            z=(max+k)/2;
-            max=max-z;
-            s=s+n*k-z;
-            if (max<max1&&max<max2) ;
+            z = (max + k) / 2;
+            max = max - z;
+            s = s + n * k - z;
+            if (max < max1 && max < max2) ;
         }
 
 
@@ -69,15 +68,7 @@ public class Ams2 {
         System.out.println(s);*/
 
 
-
-
-
-
-
     }
-
-
-
 
 
     //冒泡排序 ,从大到小
@@ -85,10 +76,10 @@ public class Ams2 {
         int t;
         for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints.length - i - 1; j++) {
-                if (ints[j]<ints[j+1]){
-                    t=ints[j];
-                    ints[j]=ints[j+1];
-                    ints[j+1]=t;
+                if (ints[j] < ints[j + 1]) {
+                    t = ints[j];
+                    ints[j] = ints[j + 1];
+                    ints[j + 1] = t;
                 }
             }
         }
@@ -103,6 +94,7 @@ public class Ams2 {
         int[] right = Arrays.copyOfRange(array, mid, array.length);
         return merge(MergeSort(left), MergeSort(right));
     }
+
     /*归并排序——将两段排序好的数组结合成一个排序数组*/
     public static int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
@@ -118,7 +110,6 @@ public class Ams2 {
         }
         return result;
     }
-
 
 
 }

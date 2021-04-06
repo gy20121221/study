@@ -8,7 +8,7 @@ import java.util.*;
 public class Study8 {
     public static void main(String[] args) {
 
-        System.out.println(add(10,20,10,30,50,55,55,84,88));
+        System.out.println(add(10, 20, 10, 30, 50, 55, 55, 84, 88));
 
         s8a();
         s8b();
@@ -21,42 +21,42 @@ public class Study8 {
     }
 
     private static void s8f() {
-        HashMap<String,String> hashMap=new HashMap<>();
-        hashMap.put(null,"qwq");
-        hashMap.put(null,null);
-        hashMap.put("qwq",null);
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put(null, "qwq");
+        hashMap.put(null, null);
+        hashMap.put("qwq", null);
         System.out.println(hashMap);
 
-        Hashtable<String,String> hashtable=new Hashtable<>();
-        hashMap.put(null,"qwq");//无法存入
-        hashMap.put(null,null);//无法存入
-        hashMap.put("qwq",null);//无法存入
+        Hashtable<String, String> hashtable = new Hashtable<>();
+        hashMap.put(null, "qwq");//无法存入
+        hashMap.put(null, null);//无法存入
+        hashMap.put("qwq", null);//无法存入
         System.out.println(hashtable);
 
     }
 
     //中文排序
     private static void s8e() {
-        Map<Study8Date2,String> map1=new HashMap<>();
-        map1.put(new Study8Date2(22,"lbw"),"sb");
-        map1.put(new Study8Date2(23,"qwq"),"sb");
-        map1.put(new Study8Date2(22,"lbw"),"sb");
-        map1.put(new Study8Date2(25,"lw"),"sb");
+        Map<Study8Date2, String> map1 = new HashMap<>();
+        map1.put(new Study8Date2(22, "lbw"), "sb");
+        map1.put(new Study8Date2(23, "qwq"), "sb");
+        map1.put(new Study8Date2(22, "lbw"), "sb");
+        map1.put(new Study8Date2(25, "lw"), "sb");
 
         for (Study8Date2 s :
                 map1.keySet()) {
-            System.out.println(s+"id:"+s.getId()+"name:"+s.getName());
+            System.out.println(s + "id:" + s.getId() + "name:" + s.getName());
         }
     }
 
 
     //map 遍历
     private static void s8d() {
-        Map<String,Integer> map1=new HashMap<>();
-        map1.put("lbw",21);
-        map1.put("lxy",21);
-        map1.put("pyy",24);
-        map1.put("zsf",23);
+        Map<String, Integer> map1 = new HashMap<>();
+        map1.put("lbw", 21);
+        map1.put("lxy", 21);
+        map1.put("pyy", 24);
+        map1.put("zsf", 23);
         System.out.println(map1);
 
         //第一种方法
@@ -66,8 +66,8 @@ public class Study8 {
         }
 
         Set<Map.Entry<String, Integer>> entries = map1.entrySet();
-        for (Map.Entry<String, Integer> e:
-               entries ) {
+        for (Map.Entry<String, Integer> e :
+                entries) {
             System.out.println(e.getKey());
             System.out.println(e.getValue());
         }
@@ -77,11 +77,11 @@ public class Study8 {
 
     //map 4个方法
     private static void s8c() {
-        Map<String,Integer> map=new HashMap<>();
-        map.put("lbw",21);
-        map.put("lxy",21);
-        map.put("pyy",24);
-        map.put("zsf",23);
+        Map<String, Integer> map = new HashMap<>();
+        map.put("lbw", 21);
+        map.put("lxy", 21);
+        map.put("pyy", 24);
+        map.put("zsf", 23);
         System.out.println(map);
 
         map.remove("lbw");
@@ -97,12 +97,12 @@ public class Study8 {
 
     //实现了汉字排序
     private static void s8b() {
-        ArrayList<Study8Date1> arrayList=new ArrayList<>();
-        arrayList.add(new Study8Date1("张",12));
-        arrayList.add(new Study8Date1("蒋勤",13));
-        arrayList.add(new Study8Date1("李白",22));
-        arrayList.add(new Study8Date1("张鹏",42));
-        arrayList.add(new Study8Date1("李",12));
+        ArrayList<Study8Date1> arrayList = new ArrayList<>();
+        arrayList.add(new Study8Date1("张", 12));
+        arrayList.add(new Study8Date1("蒋勤", 13));
+        arrayList.add(new Study8Date1("李白", 22));
+        arrayList.add(new Study8Date1("张鹏", 42));
+        arrayList.add(new Study8Date1("李", 12));
 
         arrayList.sort(new Comparator<Study8Date1>() {
             @Override
@@ -110,9 +110,9 @@ public class Study8 {
                 int i = o1.getAge() - o2.getAge();
                 if (i == 0) {
                     Collator collator = Collator.getInstance(Locale.CHINA);
-                    CollationKey collationKey1=collator.getCollationKey(o1.getName());
-                    CollationKey collationKey2=collator.getCollationKey(o2.getName());
-                    i=collationKey1.compareTo(collationKey2);
+                    CollationKey collationKey1 = collator.getCollationKey(o1.getName());
+                    CollationKey collationKey2 = collator.getCollationKey(o2.getName());
+                    i = collationKey1.compareTo(collationKey2);
                 }
                 return i;
             }
@@ -121,7 +121,7 @@ public class Study8 {
     }
 
     private static void s8a() {
-        ArrayList<Integer> arrayList=new ArrayList<>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(1);
         arrayList.add(5);
         arrayList.add(12);
@@ -130,22 +130,22 @@ public class Study8 {
         Collections.sort(arrayList);
         System.out.println(arrayList);
 
-        ArrayList<Study8Date> arrayList1=new ArrayList<>();
-        arrayList1.add(new Study8Date("qwq",12));
-        arrayList1.add(new Study8Date("q",23));
-        arrayList1.add(new Study8Date("wq",22));
+        ArrayList<Study8Date> arrayList1 = new ArrayList<>();
+        arrayList1.add(new Study8Date("qwq", 12));
+        arrayList1.add(new Study8Date("q", 23));
+        arrayList1.add(new Study8Date("wq", 22));
         Collections.sort(arrayList1);
         System.out.println(arrayList1);
     }
 
     //可变差数,
-    private static int add(int...arr) {
+    private static int add(int... arr) {
         System.out.println(Arrays.toString(arr));
         System.out.println(arr.length);
-        int s=0;
+        int s = 0;
         for (int i :
                 arr) {
-            s+=i;
+            s += i;
         }
         return s;
     }

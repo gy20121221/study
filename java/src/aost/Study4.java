@@ -37,7 +37,7 @@ public class Study4 {
         System.out.println(mi.toString());*/
 
 
-        Computer computer=new Computer();
+        Computer computer = new Computer();
         computer.openC();
 
         computer.userUsb(new Mouse());

@@ -13,10 +13,10 @@ public class Mouse implements Usb {
 
     @Override
     public int jia(int a, int b) {
-        return a+b;
+        return a + b;
     }
 
-    public void clk(){
+    public void clk() {
         System.out.println("点击鼠标");
     }
 }

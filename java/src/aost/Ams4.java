@@ -14,7 +14,7 @@ public class Ams4 {
         a.next = b;
         b.next = c;
         c.next = d;
-        d.next=a;
+        d.next = a;
 //        sc(a);
 //        ListNode a1 = ReverseList(a);
 //        sc(a1);
@@ -72,12 +72,12 @@ public class Ams4 {
     public static boolean hasCycle(ListNode head) {
         if (head == null)
             return false;
-        ListNode fast=head;
-        ListNode low=head;
-        while (fast!=null&&fast.next!=null){
-            low=low.next;
-            fast=fast.next.next;
-            if (low==fast)
+        ListNode fast = head;
+        ListNode low = head;
+        while (fast != null && fast.next != null) {
+            low = low.next;
+            fast = fast.next.next;
+            if (low == fast)
                 return true;
         }
         return false;
@@ -103,18 +103,14 @@ public class Ams4 {
     public static boolean hasCycle2(ListNode head) {
 
         ListNode p = head;
-        while(p!=null){
+        while (p != null) {
             ListNode aft = p.next;
-            if(aft==head) return true;
-            p.next=head;
-            p=aft;
+            if (aft == head) return true;
+            p.next = head;
+            p = aft;
         }
         return false;
     }
-
-
-
-
 
 
 }
