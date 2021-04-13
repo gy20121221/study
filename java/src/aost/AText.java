@@ -94,14 +94,7 @@ public class AText {
         return Math.min(s0,s1);
     }*/
 
-/*    public long findMaxButtons (int[] buttons) {
-        // write code here
-        
 
-
-
-
-    }*/
 
 
 }
