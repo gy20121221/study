@@ -50,7 +50,7 @@ public class AText8 {
 
 
 
-// 判断平衡二叉树
+/*// 判断平衡二叉树
     public boolean isBalanced (TreeNode node) {
         // write code here
         if(root == null){
@@ -65,7 +65,7 @@ public class AText8 {
             return -1;
         }
         return Math.abs(left-right)>1?-1:1+Math.max(left, right);
-    }
+    }*/
 
 
 }
