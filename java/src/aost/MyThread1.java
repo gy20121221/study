@@ -1,15 +1,17 @@
 package aost;
 
 public class MyThread1 implements Runnable{
-    private static int i=0;
+    private  int i=0;
     @Override
     public  void  run() {
 
         for (int j = 0; j < 100; j++) {
             i++;
             System.out.println(i);
-            System.out.println(this.hashCode());
+            System.out.println(this.toString());
         }
+
+
 
     }
 

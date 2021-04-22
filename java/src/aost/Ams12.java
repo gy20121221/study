@@ -17,14 +17,14 @@ public class Ams12 {
         // write code here
         LinkedList<Integer> list = new LinkedList<>();
         int ans = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (list.contains(arr[i])) {
-                int j = list.indexOf(arr[i]);
+        for (int k : arr) {
+            if (list.contains(k)) {
+                int j = list.indexOf(k);
                 while (j-- >= 0) {
                     list.removeFirst();
                 }
             }
-            list.add(arr[i]);
+            list.add(k);
             ans = Math.max(ans, list.size());
         }
         return ans;
