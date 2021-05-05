@@ -12,8 +12,17 @@ public class Ams12 {
     }
 
 
-    //给定一个数组arr，返回arr的最长无的重复子串的长度(无重复指的是所有数字都不相同)。
+
+    /**
+     * @Author aost
+     * @Description 给定一个数组arr，返回arr的最长无的重复子串的长度(无重复指的是所有数字都不相同)。
+     * @Date 15:05 2021/4/29
+     * @Param [arr]
+     * @return int
+     **/
     public static int maxLength(int[] arr) {
+
+
         // write code here
         LinkedList<Integer> list = new LinkedList<>();
         int ans = 0;

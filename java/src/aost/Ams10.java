@@ -10,7 +10,6 @@ public class Ams10 {
 
     }
 
-
     public int numBusesToDestination(int[][] routes, int S, int T) {
         if (S == T) return 0;
         int N = routes.length;

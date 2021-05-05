@@ -5,24 +5,31 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.Transferable;
 import java.awt.event.KeyEvent;
-
+/**
+ * @Author aost
+ * @Description å¤åˆ¶ç²˜è´´æ–‡å­—å‘é€
+ * @Date  2021/5/3
+ * @Param
+ * @Return
+ * @MethodName
+ */
 public class Demo3 {
     public static void main(String[] args) throws AWTException {
 
-        Robot robot = new Robot();// ´´½¨Robot¶ÔÏó£¨»úÆ÷ÈË£©
-        robot.delay(4000);// ÑÓ³ÙÁùÃë£¬Ö÷ÒªÊÇÎªÁËÔ¤Áô³ö´ò¿ª´°¿ÚµÄÊ±¼ä£¬À¨ºÅÄÚµÄµ¥Î»ÎªºÁÃë
+        Robot robot = new Robot();// åˆ›å»ºRobotå¯¹è±¡ï¼ˆæœºå™¨äººï¼‰
+        robot.delay(4000);// å»¶è¿Ÿå…­ç§’ï¼Œä¸»è¦æ˜¯ä¸ºäº†é¢„ç•™å‡ºæ‰“å¼€çª—å£çš„æ—¶é—´ï¼Œæ‹¬å·å†…çš„å•ä½ä¸ºæ¯«ç§’
         Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();
-        for (int j = 0; j < 101; j++) {//Ñ­»·´ÎÊı
-            String sentencet = "wdnmd" + j + "´Î";
+        for (int j = 0; j < 101; j++) {//å¾ªç¯æ¬¡æ•°
+            String sentencet = "wdnmd" + j + "æ¬¡";
             System.out.println(sentencet);
             Transferable tText = new StringSelection(sentencet);
             clip.setContents(tText, null);
-            // ÒÔÏÂÁ½ĞĞ°´ÏÂÁËctrl+v£¬Íê³ÉÕ³Ìù¹¦ÄÜ
-            robot.keyPress(KeyEvent.VK_CONTROL);// °´ÏÂControl¼ü
-            robot.keyPress(KeyEvent.VK_V);// °´ÏÂV¼ü
-            robot.keyRelease(KeyEvent.VK_CONTROL);// ÊÍ·Åctrl°´¼ü£¬Ïñctrl£¬ÍË¸ñ¼ü£¬É¾³ı¼üÕâÑùµÄ¹¦ÄÜĞÔ°´¼ü£¬ÔÚ°´ÏÂºóÒ»¶¨ÒªÊÍ·Å£¬²»È»»á³öÎÊÌâ¡£crtlÈç¹û°´×¡Ã»ÓĞÊÍ·Å£¬ÔÚ°´ÆäËû×ÖÄ¸°´¼üÊÇ£¬ÇÃ³öÀ´µÄ»ØÊÂctrlµÄ¿ì½İ¼ü¡£
-            robot.delay(500);// ÑÓ³ÙÒ»ÃëÔÙ·¢ËÍ£¬²»È»»áÒ»´ÎĞÔÈ«·¢²¼³öÈ¥£¬ÒòÎªµçÄÔµÄ´¦ÀíËÙ¶ÈºÜ¿ì£¬Ã¿´ÎÕ³Ìù·¢ËÍµÄËÙ¶È¼¸ºõÊÇÒ»Ë²¼ä£¬ËùÒÔ¸øÈËµÄ¸Ğ¾õ¾ÍÊÇÒ»´ÎĞÔ·¢ËÍÁËÈ«²¿¡£Õâ¸öÊ±¼ä¿ÉÒÔ×Ô¼º¸Ä£¬Ïë¼¸Ãë·¢ËÍÒ»Ìõ¶¼¿ÉÒÔ
-            robot.keyPress(KeyEvent.VK_ENTER);// »Ø³µ
+            // ä»¥ä¸‹ä¸¤è¡ŒæŒ‰ä¸‹äº†ctrl+vï¼Œå®Œæˆç²˜è´´åŠŸèƒ½
+            robot.keyPress(KeyEvent.VK_CONTROL);// æŒ‰ä¸‹Controlé”®
+            robot.keyPress(KeyEvent.VK_V);// æŒ‰ä¸‹Vé”®
+            robot.keyRelease(KeyEvent.VK_CONTROL);// é‡Šæ”¾ctrlæŒ‰é”®ï¼Œåƒctrlï¼Œé€€æ ¼é”®ï¼Œåˆ é™¤é”®è¿™æ ·çš„åŠŸèƒ½æ€§æŒ‰é”®ï¼Œåœ¨æŒ‰ä¸‹åä¸€å®šè¦é‡Šæ”¾ï¼Œä¸ç„¶ä¼šå‡ºé—®é¢˜ã€‚crtlå¦‚æœæŒ‰ä½æ²¡æœ‰é‡Šæ”¾ï¼Œåœ¨æŒ‰å…¶ä»–å­—æ¯æŒ‰é”®æ˜¯ï¼Œæ•²å‡ºæ¥çš„å›äº‹ctrlçš„å¿«æ·é”®ã€‚
+            robot.delay(500);// å»¶è¿Ÿä¸€ç§’å†å‘é€ï¼Œä¸ç„¶ä¼šä¸€æ¬¡æ€§å…¨å‘å¸ƒå‡ºå»ï¼Œå› ä¸ºç”µè„‘çš„å¤„ç†é€Ÿåº¦å¾ˆå¿«ï¼Œæ¯æ¬¡ç²˜è´´å‘é€çš„é€Ÿåº¦å‡ ä¹æ˜¯ä¸€ç¬é—´ï¼Œæ‰€ä»¥ç»™äººçš„æ„Ÿè§‰å°±æ˜¯ä¸€æ¬¡æ€§å‘é€äº†å…¨éƒ¨ã€‚è¿™ä¸ªæ—¶é—´å¯ä»¥è‡ªå·±æ”¹ï¼Œæƒ³å‡ ç§’å‘é€ä¸€æ¡éƒ½å¯ä»¥
+            robot.keyPress(KeyEvent.VK_ENTER);// å›è½¦
             // }
         }
     }

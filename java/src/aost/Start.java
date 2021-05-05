@@ -3,10 +3,9 @@ package aost;
 import Study.Study;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
- * @author ºÙºÙ
+ * @author å˜¿å˜¿
  */
 public class Start {
 
@@ -33,32 +32,32 @@ public class Start {
         arrayE();
         arrayF();
         Study stu=new Study();
-        //´´½¨£ºÀàÃû³Æ ¶ÔÏó=new ÀàÃû³Æ
+        //åˆ›å»ºï¼šç±»åç§° å¯¹è±¡=new ç±»åç§°
         System.out.println(stu.name);
-        //ÀàµÄµ÷ÓÃ
+        //ç±»çš„è°ƒç”¨
         System.out.println(stu.age);
-        //ÀàµÄµ÷ÓÃ
-        stu.eat();//ÀàµÄµ÷ÓÃ
-        stu.sleep();//ÀàµÄµ÷ÓÃ
-        stu.study();//ÀàµÄµ÷ÓÃ
+        //ç±»çš„è°ƒç”¨
+        stu.eat();//ç±»çš„è°ƒç”¨
+        stu.sleep();//ç±»çš„è°ƒç”¨
+        stu.study();//ç±»çš„è°ƒç”¨
 //        Scanner s=new Scanner(System.in);
 //        int a;
 //        a=s.nextInt();
 //        System.out.println(a);
-//        ÊäÈëÊä³ö
+//        è¾“å…¥è¾“å‡º
         aost.Phone one=new aost.Phone();
-        one.brand="Ğ¡Ã×";
+        one.brand="å°ç±³";
         one.price=1999;
         one.color="black";
         method(one);
-        //¶ÔÏóÀàĞÍ×÷Îª²ÎÊı
+        //å¯¹è±¡ç±»å‹ä½œä¸ºå‚æ•°
         method(phone2());
-        //¶ÔÏóÀàĞÍ×÷Îª²ÎÊı
+        //å¯¹è±¡ç±»å‹ä½œä¸ºå‚æ•°
         int[] arr={5,10,25,50,100};
         System.out.println(max(arr));
         System.out.println(min(arr));
         aost.Private1 tow=new aost.Private1();
-        tow.name="Ğ¡·É";
+        tow.name="å°é£";
         tow.setAge(20);
         tow.setMan(true);
         tow.show();
@@ -78,36 +77,36 @@ public class Start {
             if(min>w[i]) {min=w[i];}
         }
         return min;
-    }//intÊı×éÊä³ö×îĞ¡Öµ
+    }//intæ•°ç»„è¾“å‡ºæœ€å°å€¼
     public static int max(int[] w){
         int i=0,max;
         for (max=w[i];i<w.length;i++){
             if(max<w[i]) {max=w[i];}
         }
         return max;
-    }//intÊı×éÊä³ö×î´óÖµ
+    }//intæ•°ç»„è¾“å‡ºæœ€å¤§å€¼
 
-/**    ¾Ö²¿±äÁ¿ºÍ³ÉÔ±±äÁ¿
-1.¶¨ÒåµÄÎ»ÖÃ²»Ò»Ñù[ÖØµã]
-    ¾Ö²¿±äÁ¿:ÔÚ·½·¨µÄÄÚ²¿
-    ³ÉÔ±±äÁ¿:ÔÚ·½·¨µÄÍâ²¿£¬Ö±½ÓĞ´ÔÚÀàµ±ÖĞ
-2.×÷ÓÃ·¶Î§²»Ò»Ñù[ÖØµã]
-    ¾Ö²¿±äÁ¿:Ö»ÓĞ·½·¨µ±ÖĞ²Å¿ÉÒÔÊ¹ÓÃ£¬³öÁË·½·¨¾Í²»ÄÜÔÙÓÃ
-    ³ÉÔ±±äÁ¿:Õû¸öÀàÈ«¶¼¿ÉÒÔÍ¨ÓÃ¡£
-            3.Ä¬ÈÏÖµ²»Ò»Ñù[ÖØµã]
-    ¾Ö²¿±äÁ¿:Ã»ÓĞÄ¬ÈÏÖµ£¬Èç¹ûÒªÏëÊ¹ÓÃ£¬±ØĞëÊÖ¶¯½øĞĞ¸³Öµ
-   ³ÉÔ±±äÁ¿:Èç¹ûÃ»ÓĞ¸³Öµ£¬»áÓĞÄ¬ÈÏÖµ£¬¹æÔòºÍÊı×éÒ»Ñù
-   4.ÄÚ´æµÄÎ»ÖÃ²»Ò»Ñù(ÁË½â)
-¾Ö²¿±äÁ¿:Î»ÓÚÕ»ÄÚ´æ
-³ÉÔ±±äÁ¿:Î»ÓÚ¶ÑÄÚ´æ
-5.ÉúÃüÖÜÆÚ²»Ò»Ñù(ÁË½â)
-¾Ö²¿±äÁ¿:Ëæ×Å·½·¨½øÕ»¶øµ®Éú£¬Ëæ×Å·½·¨³öÕ»¶øÏûÊ§
-³ÉÔ±±äÁ¿:Ëæ×Å¶ÔÏó´´½¨¶øµ®Éú£¬Ëæ×Å¶ÔÏó±»À¬»ø»ØÊÕ¶øÏûÊ§
+/**    å±€éƒ¨å˜é‡å’Œæˆå‘˜å˜é‡
+1.å®šä¹‰çš„ä½ç½®ä¸ä¸€æ ·[é‡ç‚¹]
+    å±€éƒ¨å˜é‡:åœ¨æ–¹æ³•çš„å†…éƒ¨
+    æˆå‘˜å˜é‡:åœ¨æ–¹æ³•çš„å¤–éƒ¨ï¼Œç›´æ¥å†™åœ¨ç±»å½“ä¸­
+2.ä½œç”¨èŒƒå›´ä¸ä¸€æ ·[é‡ç‚¹]
+    å±€éƒ¨å˜é‡:åªæœ‰æ–¹æ³•å½“ä¸­æ‰å¯ä»¥ä½¿ç”¨ï¼Œå‡ºäº†æ–¹æ³•å°±ä¸èƒ½å†ç”¨
+    æˆå‘˜å˜é‡:æ•´ä¸ªç±»å…¨éƒ½å¯ä»¥é€šç”¨ã€‚
+            3.é»˜è®¤å€¼ä¸ä¸€æ ·[é‡ç‚¹]
+    å±€éƒ¨å˜é‡:æ²¡æœ‰é»˜è®¤å€¼ï¼Œå¦‚æœè¦æƒ³ä½¿ç”¨ï¼Œå¿…é¡»æ‰‹åŠ¨è¿›è¡Œèµ‹å€¼
+   æˆå‘˜å˜é‡:å¦‚æœæ²¡æœ‰èµ‹å€¼ï¼Œä¼šæœ‰é»˜è®¤å€¼ï¼Œè§„åˆ™å’Œæ•°ç»„ä¸€æ ·
+   4.å†…å­˜çš„ä½ç½®ä¸ä¸€æ ·(äº†è§£)
+å±€éƒ¨å˜é‡:ä½äºæ ˆå†…å­˜
+æˆå‘˜å˜é‡:ä½äºå †å†…å­˜
+5.ç”Ÿå‘½å‘¨æœŸä¸ä¸€æ ·(äº†è§£)
+å±€éƒ¨å˜é‡:éšç€æ–¹æ³•è¿›æ ˆè€Œè¯ç”Ÿï¼Œéšç€æ–¹æ³•å‡ºæ ˆè€Œæ¶ˆå¤±
+æˆå‘˜å˜é‡:éšç€å¯¹è±¡åˆ›å»ºè€Œè¯ç”Ÿï¼Œéšç€å¯¹è±¡è¢«åƒåœ¾å›æ”¶è€Œæ¶ˆå¤±
 
    **/
     public static aost.Phone phone2(){
         aost.Phone one=new aost.Phone   ();
-        one.brand="Ğ¡Ã×";
+        one.brand="å°ç±³";
         one.price=1999;
         one.color="black";
         return one;
@@ -130,7 +129,7 @@ public class Start {
             System.out.println("+++++++++");
             System.out.println(Arrays.toString(array1)); }
 
-    }//ÃæÏò¶ÔÏóºÍÃæÏò¹ı³ÌµÄ²»Í¬¡£
+    }//é¢å‘å¯¹è±¡å’Œé¢å‘è¿‡ç¨‹çš„ä¸åŒã€‚
     public static void arrayE(){
         System.out.println("@@@@@");
         int array1[]=new int[]{25,30,62,15,24};
@@ -143,7 +142,7 @@ public class Start {
         for (int i1 = 0; i1 < array1.length; i1++) {
             System.out.println(array1[i1]);
         }
-    }//Ê×Î²½»»»
+    }//é¦–å°¾äº¤æ¢
     public static void arrayD(){
         int array1[]=new int[]{5,15,100,30,1000};
         int mid,i=1;
@@ -151,21 +150,21 @@ public class Start {
             if (mid<array1[i]) {mid=array1[i];}
         }
         System.out.println(mid);
-    }//Êä³ö×î´óÖµ
+    }//è¾“å‡ºæœ€å¤§å€¼
     public static void arrayC(){
         System.out.println("$$$$$$");
         int[] array1=new int[]{5,4,52,47,65,25,41,52,412};
         for (int i = 0; i < array1.length; i++) {
             System.out.println(array1[i]);
         }
-    }//±éÀúÊı×é
+    }//éå†æ•°ç»„
     public static void arrayB(){
         int[] array1 =new int[]{1,1,5,151,5551,5515,555,222};
         int a= array1.length;
         System.out.println("@@@@@@@@");
         System.out.println(a);
         System.out.println(array1);
-        //Êı×éÔÚ³ÌĞòÔËĞĞÆÚ¼ä²»¿ÉÒÔ¸Ä±ä³¤¶È£¬³ı·ÇÖØĞÂ¸³Öµ
+        //æ•°ç»„åœ¨ç¨‹åºè¿è¡ŒæœŸé—´ä¸å¯ä»¥æ”¹å˜é•¿åº¦ï¼Œé™¤éé‡æ–°èµ‹å€¼
         array1=new int[10];
         System.out.println(array1);
         System.out.println(array1.length);
@@ -195,7 +194,7 @@ public class Start {
         System.out.println(array1[0]);
         System.out.println(array1[1]);
         System.out.println(array1[2]);
-    }//Ö¸ÕëµÄÊµÀı
+    }//æŒ‡é’ˆçš„å®ä¾‹
     public static void arrayA(){
         int[] array1=new int[3];
         int[] array2=new int[3];
@@ -209,7 +208,7 @@ public class Start {
         System.out.println(array2);
         System.out.println(array2[1]);
         System.out.println(array2[2]);
-    }//Êı×éµÄµ÷ÓÃ
+    }//æ•°ç»„çš„è°ƒç”¨
     public static void  array(){
         int[] array1=new int[10];
         int[] array2=new int[]{5,15,25};
@@ -218,16 +217,16 @@ public class Start {
         System.out.println(array1[1]);
         System.out.println(array2[1]);
         System.out.println(array3[1]);
-    }//Êı×éµÄ²»Í¬¶¨Òå·½·¨£¬¾²Ì¬£¬¶¯Ì¬
+    }//æ•°ç»„çš„ä¸åŒå®šä¹‰æ–¹æ³•ï¼Œé™æ€ï¼ŒåŠ¨æ€
     public  static  int sum(int a,int b,int c) {
         return a+b+c;
-    }//·µ»Ø3¸öÖµÏà¼Ó
+    }//è¿”å›3ä¸ªå€¼ç›¸åŠ 
     public  static int sum(int a,int b){
         return a+b;
-    }//·µ»Ø2¸öÖµÏà¼Ó
+    }//è¿”å›2ä¸ªå€¼ç›¸åŠ 
     public  static boolean equal(int a, int b){
         return a==b;
-    }//Èç¹ûa£¬bÏàµÈ·µ»Øture
+    }//å¦‚æœaï¼Œbç›¸ç­‰è¿”å›ture
     public  static void time(){
         int s=0,f=0,m=0,num=0;
         for (;s<=24;s++){
@@ -236,7 +235,7 @@ public class Start {
                 {num+=m;}}
             }
         System.out.println(num);
-    }//forµÄ¼òµ¥Ê¹ÓÃ
+    }//forçš„ç®€å•ä½¿ç”¨
    public  static void con(){
         int i,s;
        for ( i=0, s=0;i<=100;i++){
@@ -244,7 +243,7 @@ public class Start {
            s+=i;
        }
        System.out.println(s);
-    }//forºÍifµÄ¼òµ¥Ç¶Ì×
+    }//forå’Œifçš„ç®€å•åµŒå¥—
     public  static void doWhile(){
         int i=0,s=0;
         do {
@@ -252,7 +251,7 @@ public class Start {
             i++;
         }while (i<=100);
         System.out.println(s);
-    }//do-whileµÄ¼òµ¥Ê¹ÓÃ
+    }//do-whileçš„ç®€å•ä½¿ç”¨
     public static void num(){
         int x=10,y;
         long z;
@@ -266,11 +265,11 @@ public class Start {
         rlt=num2<num3?num2:num3;
         String qw;
         qw="hello";
-        m='ÖĞ';
+        m='ä¸­';
         t='w';
         int num1=t;
         r=false;
-        e='ÔÚ';
+        e='åœ¨';
         w=10.1;
         q=2.5F;
         z=100000000000000L;
@@ -290,7 +289,7 @@ public class Start {
         System.out.println(++y);
         System.out.println("hello,world!!!"+w);
         System.out.println("this is "+w+" num");
-    }//¸÷ÖÖÊä³ö·½Ê½
+    }//å„ç§è¾“å‡ºæ–¹å¼
     public static void while1(){
         int i=0,s=0;
         while (i<=100){
@@ -298,7 +297,7 @@ public class Start {
             i++;
         }
         System.out.println(s);
-    }//whileµÄ¼òµ¥Ê¹ÓÃ
+    }//whileçš„ç®€å•ä½¿ç”¨
     public static void for1(){
         int i,s;
         for (i=0,s=0;i<=100;i++){
@@ -306,7 +305,7 @@ public class Start {
         }
         System.out.println(s);
 
-    }//forµÄ¼òµ¥Ê¹ÓÃ
+    }//forçš„ç®€å•ä½¿ç”¨
     public static void switch1(){
         int a=2;
         switch (a){
@@ -323,7 +322,7 @@ public class Start {
                 System.out.println("no");
         }
 
-    }//switchµÄ¼òµ¥Ê¹ÓÃ
+    }//switchçš„ç®€å•ä½¿ç”¨
     public  static void if1(){
         int a=100,i=0,s=0;
         if (a>s){
@@ -337,7 +336,7 @@ public class Start {
         System.out.println(i);
         System.out.println(s);
         System.out.println(i+s);
-    }//if-elseµÄ¼òµ¥Ê¹ÓÃ
+    }//if-elseçš„ç®€å•ä½¿ç”¨
     public static void out2(){
         System.out.println("hello2");
     }

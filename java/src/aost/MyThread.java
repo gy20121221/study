@@ -16,7 +16,7 @@ public class MyThread extends Thread {
     @Override
     public  void run() {
         ++i;
-        System.out.println("Ïß³Ì"+i);
+        System.out.println("ï¿½ß³ï¿½"+i);
     }
 
 }

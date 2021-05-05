@@ -4,10 +4,16 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * @author 嘿嘿
+ * @Author aost
+ * @Description
+ * @Date  2021/5/3
+ * @Param 
+ * @Return 
+ * @MethodName 
  */
 public class Exer1 {
     public static void main(String[] args) {
+       
         Random r = new Random();
         ArrayList<Integer> list1 = new ArrayList<>();
         for (int i = 0; i < 6; i++) {

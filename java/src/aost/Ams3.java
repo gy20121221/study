@@ -1,5 +1,6 @@
 package aost;
 
+
 public class Ams3 {
     public static void main(String[] args) {
         //在一个二维数组中（每个一维数组的长度相同），
@@ -12,6 +13,15 @@ public class Ams3 {
         System.out.println(Find(a, arr));
     }
 
+
+    /**
+     * @Author aost
+     * @Description 判断数组中有没有target
+     * @Date  2021/4/29
+     * @Param [target, array]
+     * @Return boolean
+     * @MethodName Find
+     */
     public static boolean Find(int target, int[][] array) {
         for (int[] ints : array) {
             for (int i = 0; i < ints.length; i++) {

@@ -1,7 +1,6 @@
 package aost;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class AText4 {
     public static void main(String[] args) {

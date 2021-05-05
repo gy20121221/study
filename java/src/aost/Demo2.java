@@ -14,7 +14,7 @@ public class Demo2 {
 
     private static void map() {
         //牌库
-        String[] h = {"♠", "♣", "♥", "♦"};
+        String[] h = {"♠", "♥", "♣", "♦"};
         String[] s = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
 
 
@@ -96,7 +96,7 @@ public class Demo2 {
 
     private static void arr() {
         //牌库
-        String[] h = {"♠", "♣", "♥", "♦"};
+        String[] h = {"", "", "", ""};
         String[] s = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
         ArrayList<String> sz = new ArrayList<>(Arrays.asList(s));
         ArrayList<String> hs = new ArrayList<>(Arrays.asList(h));
