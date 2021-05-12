@@ -1,4 +1,4 @@
-package aost;
+package aost.ms;
 
 public class Ams6 {
     public static void main(String[] args) {

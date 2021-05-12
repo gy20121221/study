@@ -1,4 +1,4 @@
-package aost;
+package aost.exer;
 
 import java.util.ArrayList;
 import java.util.Random;

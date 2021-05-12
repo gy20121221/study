@@ -1,8 +1,6 @@
-package aost;
+package aost.demo;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.text.ParseException;
 import java.util.Scanner;
 
 public class Demo1 {

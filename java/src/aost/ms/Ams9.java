@@ -1,7 +1,5 @@
-package aost;
+package aost.ms;
 
-
-import java.util.Scanner;
 
 /**
  * 给你一个数组 routes ，表示一系列公交线路，其中每个 routes[i] 表示一条公交线路，第 i 辆公交车将会在上面循环行驶。

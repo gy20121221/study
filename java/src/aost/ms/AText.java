@@ -1,4 +1,4 @@
-package aost;
+package aost.ms;
 
 import java.util.Collection;
 import java.util.HashMap;

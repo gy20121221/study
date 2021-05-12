@@ -1,4 +1,4 @@
-package aost;
+package aost.ms;
 
 public class AText7 {
     public static void main(String[] args) {

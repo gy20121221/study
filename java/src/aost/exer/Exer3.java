@@ -1,4 +1,4 @@
-package aost;
+package aost.exer;
 //《算法》中的代码
 
 import java.util.Random;

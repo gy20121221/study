@@ -1,4 +1,4 @@
-package aost;
+package aost.demo;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;

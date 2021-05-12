@@ -1,6 +1,5 @@
-package aost;
+package aost.exer;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Exer4 {

@@ -1,4 +1,4 @@
-package aost;
+package aost.demo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
