@@ -9,7 +9,11 @@ import java.util.Arrays;
  * @Date 2021/5/15
  * @Version 1.0
  */
+
 public class a3 {
+    public static void main(String[] args) {
+
+    }
     /**
      * @Author aost
      * @Description 给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。
