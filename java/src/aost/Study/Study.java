@@ -1,4 +1,4 @@
-package Study;
+package aost.Study;
 
 public class Study {
     public String name;
@@ -13,5 +13,4 @@ public class Study {
     public void study(){
         System.out.println("学习");
     }
-        
 }

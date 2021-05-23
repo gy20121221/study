@@ -1,12 +1,10 @@
 package aost.ms;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ams5 {
     public static void main(String[] args) {
-
 
 //有n个果冻排成一排.第I个果冻的美味度是ai.
 //天使非常喜欢吃果冻，但她想把最好吃的果冻留到最后收藏.天使想知道前x个果冻中，美味度第二大的果冻有多少美味度？
