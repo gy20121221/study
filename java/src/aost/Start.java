@@ -1,6 +1,6 @@
 package aost;
 
-import Study.Study;
+import aost.Study.*;
 
 import java.util.Arrays;
 

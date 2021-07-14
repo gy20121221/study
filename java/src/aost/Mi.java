@@ -1,6 +1,5 @@
 package aost;
 
-import aost.Phone;
 
 public class Mi extends Phone {
     @Override
