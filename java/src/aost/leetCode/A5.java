@@ -1,6 +1,5 @@
 package aost.leetCode;
 
-import java.util.ArrayList;
 
 /**
  * @author aost
