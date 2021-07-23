@@ -1,10 +1,8 @@
 package aost.leetCode;
 
 
-import aost.ms.Ams4;
-
 import java.util.ArrayList;
-import java.util.LinkedList;
+
 
 /**
  * @author aost
@@ -78,12 +76,12 @@ public class A5 {
     }
 
     public boolean isOut(int m, int n, int k) {
-        int m1 = 1, n1 = 1, q = m, w = n;
-        while (q >= 10) {
+        int m1 = 1, n1 = 1, q = m, w = n, ten = 10;
+        while (q >= ten) {
             q = q / 10;
             m1++;
         }
-        while (w >= 10) {
+        while (w >= ten) {
             w = w / 10;
             n1++;
         }
@@ -133,6 +131,7 @@ public class A5 {
      * description  输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
      *
      * @author aost
+     * time 1  70%  arm  70%
      * date 15:02 2021/7/21
      * param [head]
      * return int[]
@@ -150,18 +149,16 @@ public class A5 {
     public int[] reversePrint(ListNode head) {
 
         ArrayList<Integer> list = new ArrayList<>();
-        ListNode miss =head;
-        while (head.next != null) {
+
+        while (head != null) {
             list.add(head.val);
-            head=miss.next;
-            miss=head.next;
+            head = head.next;
         }
         int[] ints = new int[list.size()];
-
-        for (int i = list.size()-1; i > 0; i--) {
-            ints[i] = list.get(i);
+        int l = list.size();
+        for (int i = 0; i < list.size(); i++) {
+            ints[i] = list.get(--l);
         }
-
         return ints;
     }
 
