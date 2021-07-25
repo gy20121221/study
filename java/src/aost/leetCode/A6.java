@@ -25,6 +25,9 @@ public class A6 {
      * return aost.leetCode.A6.TreeNode
      */
 
+
+
+
     public class TreeNode {
         int val;
         TreeNode left;
@@ -35,6 +38,7 @@ public class A6 {
 
 
     public Map<Integer,Integer> map= new HashMap<>();
+    
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         int  rootVal=preorder[0],inorderRoot=0;
