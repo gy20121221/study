@@ -74,15 +74,43 @@ public class A6 {
      * 每段绳子的长度记为 k[0],k[1]...k[m-1] 。请问 k[0]*k[1]*...*k[m-1] 可能的最大乘积是多少？
      * 例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。 2 <= n <= 58
      * @author aost
+     * time 0 100%  ram 70%
      * date 16:04 2021/7/27
      * param [n]
      * return int
      */
-    
+
     public int cuttingRope(int n) {
 
+        if (n==2) {return 1;}
+        else if(n==3) {return 2;}
+        int max=0;
+        int pow=n/3;
+        if (n%3==0){
+            max= (int) Math.pow(3,pow);
+        }else if (n%3==2){
+            max=(int)Math.pow(3,pow)*2;
+        }else {
+            max=(int) Math.pow(3,pow-1)*4;
+        }
+        return max;
     }
 
+
+
+
+    /**
+     * description  给定一个n，求[1,n]这n个数字的排列组合有多少个。条件：相邻的两个数字的绝对值不能等于1
+     * @author aost
+     * date 9:08 2021/7/28
+     * param [visit, result, n, last, size]
+     * return void
+     */
+
+    public void getNum(int[] visit, int[] result,int n, int last, int size){
+
+
+    }
 
 }
     
