@@ -84,16 +84,13 @@ public class A6 {
 
         if (n==2) {return 1;}
         else if(n==3) {return 2;}
-        int max=0;
-        int pow=n/3;
-        if (n%3==0){
-            max= (int) Math.pow(3,pow);
-        }else if (n%3==2){
-            max=(int)Math.pow(3,pow)*2;
-        }else {
-            max=(int) Math.pow(3,pow-1)*4;
+        int max=1;
+        while (n>4){
+            max*=3;
+            max%=1000000007;
+            n-=3;
         }
-        return max;
+        return max*n%1000000007;
     }
 
 
@@ -109,6 +106,7 @@ public class A6 {
 
     public void getNum(int[] visit, int[] result,int n, int last, int size){
 
+    }
 
     }
 
