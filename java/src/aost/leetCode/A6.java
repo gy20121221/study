@@ -1,6 +1,6 @@
 package aost.leetCode;
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +11,8 @@ import java.util.Map;
  * @date 2021/7/22 14:07
  */
 public class A6 {
+
+
 
 
     /**
@@ -106,8 +108,63 @@ public class A6 {
 
     public void getNum(int[] visit, int[] result,int n, int last, int size){
 
+
+
+        int sum=0;
+
+    }
+    public static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
+    /**
+     * description  输入两个递增排序的链表，合并这两个链表并使新链表中的节点仍然是递增排序的。
+     * @author aost
+     * time 1ms 80%  ram  70%
+     * date 16:13 2021/8/2
+     * param [l1, l2]
+     * return aost.leetCode.A6.ListNode
+     */
+        
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dum = new ListNode(0), cur = dum;
+        while(l1 != null && l2 != null) {
+            if(l1.val < l2.val) {
+                cur.next = l1;
+                l1 = l1.next;
+            }
+            else {
+                cur.next = l2;
+                l2 = l2.next;
+            }
+            cur = cur.next;
+        }
+        cur.next = l1 != null ? l1 : l2;
+        return dum.next;
+    }
+
+
+    public static void main(String[] args) {
+        ListNode l1=new ListNode(0),l11=l1;
+        ListNode l2=new ListNode(10),l22=l2;
+        for (int i = 1; i < 10; i++) {
+            l1.next=new ListNode(i);
+            l1=l1.next;
+        }
+        for (int i = 11; i < 20; i++) {
+            l2.next=new ListNode(i);
+            l2=l2.next;
+        }
+        ListNode head = mergeTwoLists(l11,l22);
+        while (head!=null){
+            System.out.println(head.val);
+            head=head.next;
+        }
     }
 
 }

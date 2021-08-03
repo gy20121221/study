@@ -30,10 +30,11 @@ public class AText8 {
                 }
             }
         }
-        if (str.length()-max<=k) return str.length();
-        else  sum=max+k;
-
-
+        if (str.length()-max<=k) {
+            return str.length();
+        } else {
+            sum=max+k;
+        }
 
         for (int i = 0; i < k; ) {
             if (chars[i]!=m){
